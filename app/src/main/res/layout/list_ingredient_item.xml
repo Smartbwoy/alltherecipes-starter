@@ -8,7 +8,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/corner_shape"
+        android:orientation="horizontal"
+        android:paddingTop="0sp"
+        android:paddingBottom="0sp">
 
         <TextView
             android:id="@+id/amount"
@@ -18,7 +21,7 @@
             android:layout_marginRight="10dp"
             android:text="6"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -28,7 +31,7 @@
             android:layout_marginRight="10dp"
             android:text="cup"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="water"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>
