@@ -15,8 +15,10 @@
         <ImageView
             android:id="@+id/imgView"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_weight="1"></ImageView>
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:contentDescription="Meal Image"
+            app:srcCompat="@drawable/meal_placeholder"></ImageView>
 
         <Button
             android:id="@+id/meal_pic_button"
@@ -29,7 +31,8 @@
             android:elevation="24dp"
             android:shadowColor="@android:color/darker_gray"
             android:text="Upload Meal Image"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:focusable="true" tools:targetApi="lollipop" />
     </LinearLayout>
 
 
@@ -116,6 +119,8 @@
         android:id="@+id/section_3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="0dp"></LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

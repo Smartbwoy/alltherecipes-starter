@@ -54,7 +54,7 @@ class Ingredients_Methods : AppCompatActivity() {
 
         }
 
-        method_button.setOnClickListener {
+       /* method_button.setOnClickListener {
             when {
                 TextUtils.isEmpty(methodText.text.toString()) -> methodText.error = "Enter Step by step methods"
 
@@ -63,10 +63,10 @@ class Ingredients_Methods : AppCompatActivity() {
         }
             var method_Adapter=RecipeMehodAdapter(this,listMethod)
             methodlist.adapter=method_Adapter
-    }
+    }*/
 
 
-        methodlist.onItemLongClickListener=AdapterView.OnItemLongClickListener { adapterView, view, position, id ->
+        /*methodlist.onItemLongClickListener=AdapterView.OnItemLongClickListener { adapterView, view, position, id ->
             //Late initialize an alert dialog object
             lateinit var dialog:AlertDialog
             // Initialize a new instance of alert dialog builder object
@@ -101,7 +101,7 @@ class Ingredients_Methods : AppCompatActivity() {
             true
 
 
-        }
+        }*/
         ingrlist.onItemLongClickListener=AdapterView.OnItemLongClickListener { adapterView, view, position, id ->
             Toast.makeText(this, "Click on " + listIngr[position].label, Toast.LENGTH_SHORT).show();
             // Late initialize an alert dialog object

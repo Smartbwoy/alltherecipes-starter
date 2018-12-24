@@ -111,11 +111,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ADD EACH METHOD STEP BY STEP"
+            android:text="ADD METHOD STEP BY STEP"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="italic" />
 
         <RelativeLayout
@@ -134,9 +134,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="160sp"
                     android:autofillHints=""
+                    android:background="@drawable/corner_shape"
                     android:ems="10"
+                    android:gravity="top"
                     android:hint="Enter Method Step"
-                    android:inputType="textMultiLine"
+                    android:inputType="text|textAutoCorrect|textMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
 
