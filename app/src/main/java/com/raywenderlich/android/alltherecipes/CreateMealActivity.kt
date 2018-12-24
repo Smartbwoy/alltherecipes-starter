@@ -28,7 +28,7 @@ import java.util.*
 
 class CreateMealActivity : AppCompatActivity() {
     private val REQUEST_CAPTURE_IMAGE = 1
-    private val REQUEST_SELECT_IMAGE_IN_ALBUM = 1
+    private val REQUEST_SELECT_IMAGE_IN_ALBUM = 10
     private val PERMISSION_REQUEST_CODE: Int = 101
     private var mCurrentPhotoPath: String? = null;
 
@@ -140,6 +140,7 @@ class CreateMealActivity : AppCompatActivity() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                         &&grantResults[1] == PackageManager.PERMISSION_GRANTED) {
 
+
                     takePicture()
 
                 } else {
@@ -163,15 +164,6 @@ class CreateMealActivity : AppCompatActivity() {
         ActivityCompat.requestPermissions(this, arrayOf(READ_EXTERNAL_STORAGE, CAMERA),
                 PERMISSION_REQUEST_CODE)
     }
-    private fun openCameraPerview() {
-        val pictureIntent = Intent(
-                MediaStore.ACTION_IMAGE_CAPTURE
-        )
-        if (pictureIntent.resolveActivity(packageManager) != null) {
-            startActivityForResult(pictureIntent,
-                    REQUEST_CAPTURE_IMAGE)
-        }
-    }
 
     @Throws(IOException::class)
     private fun createFile(): File {
@@ -187,6 +179,7 @@ class CreateMealActivity : AppCompatActivity() {
             mCurrentPhotoPath = absolutePath
         }
     }
+
     private fun takePicture() {
 
         val intent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
